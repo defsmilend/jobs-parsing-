@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Search = () => {
-    return (
-        <div>
-            dfdf
-        </div>
-    )
-}
+const Search = () => (
+  <div>
+    dfdf
+  </div>
+);
 
-export default Search
+export default Search;
