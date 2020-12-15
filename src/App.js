@@ -1,6 +1,7 @@
 import React from 'react';
+import Vacancy from './components/Vacancy';
 
 const App = () => (
-  <div>ffff</div>
-)
+  <Vacancy />
+);
 export default App;
