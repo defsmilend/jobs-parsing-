@@ -63,10 +63,10 @@ const Perspectives = () => {
             Наши планы:
           </StyledTypography>
           <StyledTypography variant="body2" color="textSecondary" component="p">
-            Расширить список тэгов;
+            Сделать список просмотренных вакансий;
           </StyledTypography>
           <StyledTypography variant="body2" color="textSecondary" component="p">
-            увеличить количество направлений обучения;
+            Добавить сортировку по найденным вакансиям;
           </StyledTypography>
         </CardContent>
       </Card>
