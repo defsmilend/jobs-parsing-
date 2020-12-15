@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
+    maxWidth: 700,
     height: 250,
     margin: '0 auto',
     display: 'flex',

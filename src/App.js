@@ -83,7 +83,7 @@ const App = () => {
           <Route exact path="/" component={Vacancy} />
           <Route path="/about" component={About} />
           <Route exact path="/contacts" component={Contacts} />
-          <Route path="/features" component={Perspectives} />
+          <Route path="/perspectives" component={Perspectives} />
           <Route path="/howtouse" component={Howtouse} />
         </Switch>
       </div>
