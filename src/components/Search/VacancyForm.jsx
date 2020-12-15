@@ -1,19 +1,26 @@
 import React from 'react';
 import { Form, useFormikContext } from 'formik';
-import { TextField } from '@material-ui/core';
 import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography, TextField } from '@material-ui/core';
 
 const WrapperForm = styled.div`
     margin: 0 auto;
     max-width: 700px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+`;
+
+const StyledTitle = styled(Typography)`
+    margin: 10px auto;
+    font-size: 18px;
+
 `;
 
 const useStyles = makeStyles(() => ({
   input: {
-    width: '400px',
+    width: '700px',
     margin: '0 auto',
     '& p': {
       margin: 0,
@@ -28,6 +35,7 @@ const VacancyForm = () => {
   return (
     <Form>
       <WrapperForm>
+        <StyledTitle>Введите интересующую вакансию</StyledTitle>
         <TextField
           error={errors.searchLabel}
           name="searchLabel"

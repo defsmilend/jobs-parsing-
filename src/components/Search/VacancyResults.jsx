@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  margin: 0 auto;
+  margin: 30px auto;
   max-width: 1000px;
 `;
 
@@ -12,6 +12,9 @@ const WrapperResult = styled.a`
   margin-top: 10px;
   padding: 10px;
   text-decoration: none;
+  &:hover {
+    opacity: 0.7;
+  }
   display: block;
   color: black;
 `;
@@ -33,10 +36,11 @@ const ResultEmpty = styled.div`
 const VacancyResults = ({ resultSearch }) => (
   <>
     { Array.isArray(resultSearch) ? resultSearch.map((vacancy) => (
-      <Container>
+      <Container
+        key={vacancy.vacancy.id}
+      >
         <WrapperResult
           href={vacancy.vacancy.vac_url}
-          key={vacancy.vacancy.id}
           target="_blank"
         >
           <VacancyTitle title>
