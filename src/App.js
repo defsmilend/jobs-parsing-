@@ -9,18 +9,16 @@ import {
 import {
   AppBar,
   Toolbar,
-  IconButton,
   List,
   ListItem,
   ListItemText,
   Container,
 } from '@material-ui/core';
-import { Home } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import Vacancy from './components/Search/Vacancy';
 import About from './components/About';
 import Contacts from './components/Contacts';
-import Feauters from './components/Feuters';
+import Perspectives from './components/Perspectives';
 import Howtouse from './components/Howtouse';
 import './App.css';
 
@@ -38,6 +36,7 @@ const useStyles = makeStyles({
   navDisplayFlex: {
     display: 'flex',
     justifyContent: 'space-between',
+    margin: '0 auto',
   },
   linkText: {
     textDecoration: 'none',
@@ -47,11 +46,11 @@ const useStyles = makeStyles({
 });
 
 const navLinks = [
-  { title: 'search', path: '/' },
-  { title: 'about us', path: '/about' },
-  { title: 'contacts', path: '/contacts' },
-  { title: 'feauters', path: '/feuters' },
-  { title: 'How to use', path: '/howtouse' },
+  { title: 'Поиск', path: '/' },
+  { title: 'О нас', path: '/about' },
+  { title: 'Контакты', path: '/contacts' },
+  { title: 'Перспективы', path: '/perspectives' },
+  { title: 'Инструкция', path: '/howtouse' },
 ];
 
 const App = () => {
@@ -63,9 +62,6 @@ const App = () => {
         <AppBar position="static">
           <Toolbar>
             <Container maxWidth="md" className={classes.navbarDisplayFlex}>
-              <IconButton edge="start" color="inherit" aria-label="home">
-                <Home fontSize="large" />
-              </IconButton>
               <List
                 component="nav"
                 aria-labelledby="main navigation"
@@ -87,7 +83,7 @@ const App = () => {
           <Route exact path="/" component={Vacancy} />
           <Route path="/about" component={About} />
           <Route exact path="/contacts" component={Contacts} />
-          <Route path="/features" component={Feauters} />
+          <Route path="/features" component={Perspectives} />
           <Route path="/howtouse" component={Howtouse} />
         </Switch>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 
-const Feuters = () => (
+const Perspectives = () => (
   <Container fixed>
     <h1>Перспективы</h1>
     <p>
@@ -15,4 +15,4 @@ const Feuters = () => (
   </Container>
 );
 
-export default Feuters;
+export default Perspectives;
