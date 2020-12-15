@@ -14,8 +14,11 @@ const Wrapper = styled.div`
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 400,
-    height: 300,
+    height: 250,
     margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
   },
   media: {
     height: 100,
@@ -51,10 +54,6 @@ const Contacts = () => {
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
             Для деловых предложений: parservakansij@gmail.com
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Для связи с разрабочиками перейдите в раздел «
-            <a href="{{ url_for('main.team_page') }}">команда</a>
           </Typography>
         </CardContent>
       </Card>
