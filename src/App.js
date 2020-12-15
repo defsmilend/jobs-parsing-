@@ -20,7 +20,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Vacancy from './components/Search/Vacancy';
 import About from './components/About';
 import Contacts from './components/Contacts';
-import Feauters from './components/Feuters';
+import Feauters from './components/Feauters';
 import Howtouse from './components/Howtouse';
 import './App.css';
 

@@ -1,9 +1,48 @@
-import { Container } from '@material-ui/core';
 import React from 'react';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { red } from '@material-ui/core/colors';
+import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
 
-const About = () => (
-  <Container fixed>
-    <p>
+const Wrapper = styled.div`
+  margin-top: 30px;
+`;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    maxWidth: 400,
+    height: 300,
+    margin: '0 auto',
+  },
+  media: {
+    height: 100,
+    width: 100,
+    margin: '0 auto',
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
+}));
+
+const About = () => {
+  const classes = useStyles();
+
+  return (
+    <Wrapper>
+      {/* <p>
       Хотите работать в сфере IT, но не знаете какую профессию выбрать и на кого пойти учиться?
       Тогда наш сайт поможет вам.
 
@@ -24,8 +63,25 @@ const About = () => (
 
       Информация для выдачи предоставлена сайтами hh.ru и mospolytech.ru
     </p>
-    <img src="http://www.daralmarjaan.com/images/about.png" alt="" />
-  </Container>
-);
+    <img src="http://www.daralmarjaan.com/images/about.png" alt="" /> */}
+      <Card className={classes.root}>
+        <CardMedia
+          className={classes.media}
+          image="https://s1.iconbird.com/ico/2014/1/567/w512h5121389807811officeaddressbookicon.png"
+          title="Paella dish"
+        />
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Для деловых предложений: parservakansij@gmail.com
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Для связи с разрабочиками перейдите в раздел «
+            <a href="{{ url_for('main.team_page') }}">команда</a>
+          </Typography>
+        </CardContent>
+      </Card>
+    </Wrapper>
+  );
+};
 
 export default About;
